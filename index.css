@@ -1,56 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@200&display=swap');
+*{
+    padding:0;
+    margin: 0;
+}
+
 body{
     font-family: 'Press Start 2P', cursive;
-    width: 98%;
-    background-color: rgba(39, 108, 199, 0.555);
+    background-color: rgba(226, 224, 224, 0.555);
 }
 
 header{
-    margin: 5% auto;
+    margin: 0% auto;
+    padding: 8px 0 0px 10px;
+    height:25vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+
+    box-shadow: 0px 3px 5px 2px rgb(175, 175, 175);
+    background-color: rgba(180, 213, 255, 0.199);
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+
+}
+header a{
+    font-weight: 700;
+    height: 100%;
+    border:0px black dotted;
+    font-size: 1.1em;
+    color:rgb(0, 0, 0);
+    text-align: none;
+    text-decoration: none;
 }
 
-#logo-link{
-    padding:2%;
-    outline:solid 0px white;
-    width: 100%;
+header a:hover{
+    color:rgb(197, 52, 52);
 }
-header a img{
-    margin: auto;
+
+#badge{
+    max-height: 100%;
+    height: 100%;
+
+}
+
+#badge a{
+    background-color: red;
+    margin:0;
+    padding:0;
+    width: 100%;
+    outline: solid 0px rgb(60, 218, 94);
+    max-height:100%;
+}
+
+#badge a img{
+    margin: 0;
+    padding: 0;
+    height: 95%;
+    max-width: 99%;
     display: block;
-    width: 90%;
+
+    outline:0px solid red;
+
+
+    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
+}
+#navbar{
+    height:fit-content;
+    width: 70%;
+    font-size: 0.8em;
+    padding:1%;
+    outline:purple 0px solid;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+#navbar a{
+    margin:1.8em 0px;
+    font-size: 1.3em;
+    outline: 0px grey dotted;
+    height:fit-content;
+
 }
 
 #title.hover{
     cursor:crosshair;
 }
 
-header{
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1.1fr 1fr;
-    padding-bottom: 5%;
-}
 
 .navbar{
-    margin-top:40%;
     display:flex;
     flex-direction: column;
-}
-.navbar a{
-    width: 100%;
-    font-weight: 700;
-    padding:10px;
-    height: 100%;
-    border:0px black dotted;
-    font-size: 1.4em;
-    color:white;
-    text-align: none;
-    text-decoration: none;
-}
-.navbar a:hover{
-    color:black;
 }
 
 
@@ -58,4 +100,154 @@ header{
     width:100%;
     margin:auto;
     border: 3px white solid;
+}
+
+
+main{
+    height:600px;
+    display: flex;
+}
+
+/*--------------------------------LEFT ADVERT------------------------------*/
+#left-advert{
+    width:300px;
+    height:600px;
+    background-color: green;
+}
+
+
+/* -------------------------------MATCH CARDS---------------------------- */
+#recent-games{
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    outline: 1px cyan solid;
+}
+
+.match-card{
+    font-family: 'Courier New', Courier, monospace;
+    width:300px;
+    height: 300px;
+    display:grid;
+    grid-template-rows: 1fr 5fr 1fr;
+
+
+    border-radius: 15px;
+    background-color:white;
+    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
+
+    text-align: center;
+    color:black;
+    transform: scale(0.7);
+}
+.match-card:hover{
+    animation-name: grow;
+    animation-duration: 0.3s;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+.date{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    background-color: rgb(187, 86, 39);
+    border-radius: 15px 15px 0 0;
+
+    box-shadow: 0px 0px 0px 0px rgba(151, 11, 11, 0.13);
+
+    font-weight: 550;
+    
+}
+.date .big-number{
+    
+    font-size:1.5em;
+    padding:3%;
+}
+.competition-label{
+    margin:12px 0 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inner{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.clubs-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.clubs-container p{
+    font-weight: 600;
+    font-size: large;
+}
+.clubs-container img{
+    height:110px;
+    width: 110px;
+    display: block;
+
+    padding: 2%;
+}
+#home-logo{
+    display: block;
+}
+#away-logo{
+    border-radius: 18%;
+}
+.clubs-container p{
+    margin:3px;
+}
+.description p{
+    padding:6px;
+}
+
+.description #description-location{
+    color:rgb(114, 114, 114);
+}
+.match-report-button{
+    width:100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px grey dotted;
+}
+.match-report-link{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+#date-2-games-ago, #date-1-games-ago{
+    background-color: rgb(42, 129, 42);
+}
+
+#date-next-game{
+    background-color: grey;
+}
+
+@keyframes grow {
+
+    from{
+        filter: drop-shadow(0 0 0px rgba(237, 250, 121, 0.705));
+
+    }
+    to{transform: scale(1.2);
+        filter: drop-shadow(0 0 6px rgba(237, 250, 121, 0.705));
+
+    }
+    
 }
