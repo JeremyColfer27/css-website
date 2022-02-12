@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+body{
+    width:100vw;
+}
+main{
+    width: 100%;
+}
+#products-container{
+    margin: auto;
+    width:80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.product{
+    outline: solid 1px red;
+    height:200px;
+}
+.product img{
+    margin:auto;
+    display: block;
+    height:80%;
+}
