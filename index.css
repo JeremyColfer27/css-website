@@ -139,8 +139,9 @@ main div{
 }
 #recent-games{
     width: 250px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-flow: reverse;
 
     outline: 0px cyan solid;
 }
