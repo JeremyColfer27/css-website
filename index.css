@@ -104,7 +104,11 @@ header a:hover{
 
 
 main{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+main div{
+    outline: pink 2px dotted;
 }
 
 /*--------------------------------LEFT ADVERT------------------------------*/
@@ -121,12 +125,11 @@ main{
     outline:black 2px solid;
     width: 100%;
 }
+/*------------Middle--------------------------------------*/
+
 
 
 /* -------------------------------MATCH CARDS---------------------------- */
-#main-content{
-    width:400px;
-}
 #pan-container{
     padding-top: 1px;
     height: 200px;
@@ -135,9 +138,9 @@ main{
     height:100%;
 }
 #recent-games{
-    width: 700px;
+    width: 250px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 
     outline: 0px cyan solid;
 }
