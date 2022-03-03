@@ -153,10 +153,9 @@ main{
     text-align: center;
 }
 .product{
+    margin-top: 10%;
     outline: solid 0px red;
-    height:200px;
-
-    color:rgba(255, 255, 255, 0);
+    color:rgb(0, 0, 0);
     position: relative;
 }
 .product:hover{
@@ -166,7 +165,7 @@ main{
 .product img{
     margin:auto;
     display: block;
-    height:80%;
+    width:90%;
 
 
 }
