@@ -137,7 +137,6 @@ main{
 .product{
     outline: solid 0px red;
     height:200px;
-    margin-top: 20%;
 
     color:white;
     position: relative;
@@ -147,7 +146,7 @@ main{
 
 }
 .product img{
-    margin: 10% auto;
+    margin:auto;
     display: block;
     height:80%;
 
