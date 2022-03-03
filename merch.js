@@ -5,6 +5,7 @@ class Product {
         this.title = title;
         this.price = price;
         this.id = id;
+        this.elem = document.getElementById(id);
     }
 
     updateTitle(newTitle){
@@ -15,6 +16,7 @@ class Product {
     updatePrice(nationalIndex){
         let newPrice = this.price * conversionRates[nationalIndex];
         let returnString = newPrice + " "  + currencySymbols[nationalIndex];
+        if (nationalIndex == 2) returnString += " e^24324"
         document.getElementById(this.id).getElementsByClassName("product-price")[0].innerHTML = returnString;
     }
 
@@ -25,9 +27,11 @@ class SoilProduct extends Product{
         let returnString = newPrice + " "  + currencySymbols[nationalIndex] + "/gram";
         document.getElementById(this.id).getElementsByClassName("product-price")[0].innerHTML = returnString;
     }
-
-
 }
+
+
+
+
 let conversionRates = [1,0.08,376453357];
 let currencySymbols = ["GBP", "Sheep", "Lira"];
 
@@ -70,4 +74,28 @@ function updateToggles(nationalIndex){
     currenyButtons[nationalIndex].getElementsByClassName("flag-cover")[0].style.visibility = "hidden";
 }
 
+for (let i = 0; i<products.length; i++){
+    let currentProduct = products[i].elem;
 
+    let currentImage = currentProduct.getElementsByClassName("product-image")[0];
+    let currentDesc = currentProduct.getElementsByClassName("product-description")[0];
+    let buttons = [currentImage,currentDesc];
+    for (let j = 0; j<buttons.length; j++){
+        buttons[j].addEventListener("mouseover", function(){
+            console.log("hovered!!");
+            currentDesc.style.visibility = "visible";
+            currentImage.style.opacity = "20%";
+            currentImage.style.cursor = "pointer";
+
+        })
+    
+        buttons[j].addEventListener("mouseout", function(){
+            console.log("hovered!!");
+            currentDesc.style.visibility = "hidden";
+            currentImage.style.opacity = "100%";
+        })
+    }
+
+
+
+}
