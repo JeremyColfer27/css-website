@@ -1,0 +1,109 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+
+body{
+    width:100vw;
+    display: flex;
+    height:100vh;
+}
+
+#starting11{
+    width:60%;
+    height:90%;
+    position: relative;
+
+    background-color: rgba(180, 186, 206, 0.589);
+}
+.playercard{
+    position: absolute;
+    width:20%;
+    height: 20%;
+
+    outline:rgb(212, 162, 175) 0px dotted;
+}
+.playercard:hover{
+    cursor: pointer;
+}
+#gk{
+
+    left:40%;
+    bottom:0%;
+}
+
+#lb{
+
+    left:0%;
+    bottom:20%;
+}
+
+#lcb{
+
+    left:25%;
+    bottom:20%;
+}
+#rcb{
+
+    left: 55%;
+    bottom: 20%;
+}
+
+#rb{
+
+    left:80%;
+    bottom:20%;
+}
+
+#lcm{
+
+    bottom:50%;
+    left:15%;
+}
+#cm{
+
+    bottom:50%;
+    left:40%;
+}
+
+#rcm{
+
+    bottom:50%;
+    left:65%;
+}
+
+#lw{
+    bottom:75%;
+    left:0%;
+}
+
+#st{
+    bottom:80%;
+    left:40%;
+}
+
+#rw{
+    bottom:75%;
+    left:80%;
+}
+
+.playercard-image{
+    width:85%;
+    display: block;
+}
+#subs{
+    display: grid;
+    width:20%;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+#subs .playercard{
+    width: 100%;
+    
+    position: unset;
+}
+
+
