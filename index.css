@@ -169,7 +169,7 @@ main div{
     display: flex;
     flex-direction: column-reverse;
     flex-flow: reverse;
-
+    background-color: rgb(240, 238, 238);
     outline: 0px cyan solid;
 }
 
