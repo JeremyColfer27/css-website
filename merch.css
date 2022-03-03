@@ -115,10 +115,28 @@ main{
     width:165px;
 }
 
+.flag-button{
+    width: 50px;
+    height: 30px;
+    position: relative;
+}
+
 .flag-button img{
     display: block;
-    width:50px;
-    height:30px;
+    width: inherit;
+    height: inherit;
+
+}
+
+.flag-cover{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+
+    left:0;
+    top:0;
+    background-color: rgba(78, 77, 90, 0.753);
+    
 }
 
 .flag-button:hover{

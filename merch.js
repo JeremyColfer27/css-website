@@ -28,8 +28,8 @@ class SoilProduct extends Product{
 
 
 }
-let conversionRates = [1,376453357];
-let currencySymbols = ["GBP", "Lira"];
+let conversionRates = [1,0.08,376453357];
+let currencySymbols = ["GBP", "Sheep", "Lira"];
 
 let shirt = new Product("Pulling Tonight Unisexdsfdsf Tee", 85, "t-shirt");
 let pasta = new Product("James' Pasta (E-book)", 24, "pasta");
@@ -46,21 +46,28 @@ function updatePrices(nationalIndex){
     }
 }
 
-function updateTurkeyPrices(){
-    for (let i = 0; i<2;i++){
-        products[i].updatePrice(1);
-        console.log("turkey modification");
-    }
-}
-function updateEnglandPrices(){
-    for (let i = 0; i<2;i++){
-        products[i].updatePrice(0);
-        console.log("England modification");
-    }
-}
-
 let englandToggle = document.getElementById("england-button");
-englandToggle.addEventListener("click", function(){updatePrices(0)});
+englandToggle.addEventListener("click", function()
+{
+    updatePrices(0);
+    updateToggles(0);
+}
+);
+
+let walesToggle = document.getElementById("wales-button");
+walesToggle.addEventListener("click", function(){updatePrices(1);updateToggles(1)});
+
 
 let turkeyToggle = document.getElementById("turkey-button");
-turkeyToggle.addEventListener("click", function(){updatePrices(1)});
+turkeyToggle.addEventListener("click", function(){updatePrices(2);updateToggles(2)});
+
+let currenyButtons = [englandToggle, walesToggle, turkeyToggle];
+updateToggles(0);
+function updateToggles(nationalIndex){
+    for (let i = 0; i<currenyButtons.length; i++){
+        currenyButtons[i].getElementsByClassName("flag-cover")[0].style.visibility = "visible";
+    }
+    currenyButtons[nationalIndex].getElementsByClassName("flag-cover")[0].style.visibility = "hidden";
+}
+
+
