@@ -15,7 +15,7 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-between;
 
     z-index: 3;
 
@@ -46,7 +46,7 @@ header a:hover{
 }
 
 #badge a{
-    background-color: red;
+    background-color: rgb(88, 29, 29);
     margin:0;
     padding:0;
     width: 100%;
@@ -58,7 +58,7 @@ header a:hover{
     margin: 0;
     padding: 0;
     height: 95%;
-    max-width: 99%;
+    max-width: 100%;
     display: block;
 
     outline:0px solid red;
@@ -66,17 +66,18 @@ header a:hover{
 
     filter: drop-shadow(0 0 8px rgb(104, 99, 99));
 }
-#navbar{
+#navigation{
+    /*justify-self: right;*/
     height:fit-content;
-    width: 70%;
+    width: 100%;
     font-size: 0.8em;
     padding:1%;
     outline:purple 0px solid;
     display:grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(6,1fr);
 }
 
-#navbar a{
+#navigation a{
     margin:1.8em 0px;
     font-size: 1.3em;
     outline: 0px grey dotted;
@@ -203,16 +204,21 @@ main{
     color: rgba(0, 0, 0, 0.685);
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     #products-container{
         grid-template-columns: 1fr;
     }
     #product-description{font-size: 0.5em;}
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     #products-container{
         grid-template-columns: 1fr 1fr;
     }
-    #product-description{font-size: 0.8em;}
+    #product-description{font-size: 0.8em;}    
+    
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+
   }

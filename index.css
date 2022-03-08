@@ -16,7 +16,7 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-between;
 
     z-index: 3;
 
@@ -47,7 +47,7 @@ header a:hover{
 }
 
 #badge a{
-    background-color: red;
+    background-color: rgb(88, 29, 29);
     margin:0;
     padding:0;
     width: 100%;
@@ -59,7 +59,7 @@ header a:hover{
     margin: 0;
     padding: 0;
     height: 95%;
-    max-width: 99%;
+    max-width: 100%;
     display: block;
 
     outline:0px solid red;
@@ -67,17 +67,18 @@ header a:hover{
 
     filter: drop-shadow(0 0 8px rgb(104, 99, 99));
 }
-#navbar{
+#navigation{
+    /*justify-self: right;*/
     height:fit-content;
-    width: 70%;
+    width: 100%;
     font-size: 0.8em;
     padding:1%;
     outline:purple 0px solid;
     display:grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(6,1fr);
 }
 
-#navbar a{
+#navigation a{
     margin:1.8em 0px;
     font-size: 1.3em;
     outline: 0px grey dotted;
@@ -126,11 +127,6 @@ main div{
     width: 100%;
 }
 /*------------Middle--------------------------------------*/
-#main-content{
-    
-    background-color: rgba(255, 0, 0, 0.041);
-}
-
 #pan-container{
     padding-top: 1px;
 }
@@ -150,10 +146,21 @@ main div{
     font-size:0.75em;
     text-align: center;
 }
+
+
+
+
 .article img{
     width: calc(90% - 14px);
     display: block;
     margin: auto;
+}
+
+#article-ad1{
+    display: none;
+    background-color: rgba(211, 5, 5, 0.849);
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
 }
 
 /* -------------------------------MATCH CARDS---------------------------- */
@@ -305,25 +312,52 @@ main div{
         display: none;
     }
 
-    #main{
-        grid-template-columns: 1fr 1fr;
+    header{
+        justify-content: left;
+    }
+
+    #navigation{
+        font-size: 0.45em;
+        max-width: 65%;
+        margin-left: -3%;
+        text-align: center;
+    }
+
+
+
+
+    main{
+        grid-template-columns:100%;
     }
 
     #articles-container{
         grid-template-columns: 1fr;
-        font-size: 0.1em;
+        width: 100%;
+
+    }
+
+    #article-ad1{
+        display: block;
+
     }
 
     #recent-games{
-        transform: scale(0.3);
+        display: none;
+        max-width:100%;
+        transform: scale(0.5);
     }
+    .article{
+        width: 100%;
+    }
+
     @keyframes grow {
 
         from{
             filter: drop-shadow(0 0 0px rgba(237, 250, 121, 0.705));
     
         }
-        to{transform: scale(0.45);
+        to{
+            transform: scale(1);
             filter: drop-shadow(0 0 6px rgba(237, 250, 121, 0.705));
     
         }
@@ -333,8 +367,9 @@ main div{
     
 }
 @media screen and (max-width:900px) {
-    .match-card{
-        --scale-factor: 0.8;
+
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
     }
 
     
