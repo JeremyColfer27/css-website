@@ -61,7 +61,7 @@ playerCards = [new PlayerCard("gk"), new PlayerCard("lb"),
                new PlayerCard("sub11")
               ];
 
-playerCards[0].setImage("images/Player Cards/TONI.png");
+
 let selector = new PlayerSelector();
 for (let i = 0; i<22; i++){
     let currentCard = playerCards[i];
