@@ -55,15 +55,12 @@ playerCards = [new PlayerCard("gk"), new PlayerCard("lb"),
                new PlayerCard("rw"),
                new PlayerCard("sub1"), new PlayerCard("sub2"),
                new PlayerCard("sub3"), new PlayerCard("sub4"),
-               new PlayerCard("sub5"), new PlayerCard("sub6"),
-               new PlayerCard("sub7"), new PlayerCard("sub8"),
-               new PlayerCard("sub9"), new PlayerCard("sub10"),
-               new PlayerCard("sub11")
+               new PlayerCard("sub5")
               ];
 
 
 let selector = new PlayerSelector();
-for (let i = 0; i<22; i++){
+for (let i = 0; i<16; i++){
     let currentCard = playerCards[i];
 
     currentCard.elem.addEventListener("click", function(){
