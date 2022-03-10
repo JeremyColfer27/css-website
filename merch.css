@@ -210,6 +210,21 @@ main{
         grid-template-columns: 1fr;
     }
     #product-description{font-size: 0.5em;}
+
+        
+    header{
+        justify-content: left;
+    }
+
+    #navigation{
+        font-size: 0.38em;
+        max-width: 65%;
+        margin-left: -3%;
+        text-align: center;
+    }
+
+
+
   }
 
   @media screen and (max-width: 1000px) {
@@ -217,16 +232,8 @@ main{
         grid-template-columns: 1fr 1fr;
     }
     #product-description{font-size: 0.8em;}    
-    
-    header{
-        justify-content: left;
-    }
 
     #navigation{
-        font-size: 0.45em;
-        max-width: 65%;
-        margin-left: -3%;
-        text-align: center;
-    }
-
+            grid-template-columns: repeat(3,1fr);
+        }
   }
