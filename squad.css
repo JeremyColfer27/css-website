@@ -5,10 +5,100 @@
 
 
 body{
-    width:90vw;
+    width:100vw;
+    height: 100vh;
+
+}
+header{
+
+    padding: 8px 0 2px 0px;
+    height:19vh;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    z-index: 3;
+
+    box-shadow: 0px 3px 5px 2px rgb(175, 175, 175);
+    background-color: rgba(180, 213, 255, 0.199);
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+
+}
+header a{
+    font-weight: 700;
+    height: 100%;
+    border:0px black dotted;
+    font-size: 1.1em;
+    color:rgb(0, 0, 0);
+    text-align: none;
+    text-decoration: none;
+}
+
+header a:hover{
+    color:rgb(197, 52, 52);
+}
+
+#badge{
+    max-height: 100%;
+    height: 100%;
 
 }
 
+#badge a{
+    background-color: rgb(88, 29, 29);
+    margin:0;
+    padding:0;
+    width: 100%;
+    outline: solid 0px rgb(60, 218, 94);
+    max-height:100%;
+}
+
+#badge a img{
+    margin: 0;
+    padding: 0;
+    height: 95%;
+    max-width: 100%;
+    display: block;
+
+    outline:0px solid red;
+
+
+    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
+}
+#navigation{
+    /*justify-self: right;*/
+    
+    width: 100%;
+    font-size: 0.8em;
+    outline:purple 0px solid;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+#navigation a{
+    margin:1.8em 0px;
+    font-size: 1.3em;
+    outline: 0px grey dotted;
+    height:fit-content;
+
+}
+
+#title.hover{
+    cursor:crosshair;
+}
+
+
+.navbar{
+    display:flex;
+    flex-direction: column;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+}
 #starting111{
     width:100%;
     padding-top: 100%;
@@ -16,8 +106,9 @@ body{
     background-color: rgba(27, 172, 46, 0.363);
 }
 #starting11{
-    width:100vw;
-    height:100vw;
+    min-width: 80vh;
+    width:80vh;
+    height:80vh;
     position: relative;
     background-color: rgba(27, 172, 46, 0.363);
 }
@@ -99,22 +190,126 @@ body{
     display: block;
     margin: auto;
 }
-#subs{
+#subs2{
     display: flex;
+    flex-direction: column;
     width:100%;
+}
+#subs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    width:100%;
+    height: fit-content;
+    outline: red 0px solid;
 }
 
 
 #subs .playercard{
-    width: 100%;
-    outline:0px;
+    height: fit-content;
+    width: 90%;
     position: unset;
+    outline: green 0px solid;
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 0px)and (max-width: 500px) {
+    header{
+        justify-content: left;
+    }
+    body{
+        width: 100vw;
+    }
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+        height:fit-content;
+        font-size: 0.50em;
+        margin-left: -3%;
+        text-align: center;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #starting11{
+        outline: red 0px solid;
+        width: 100%;
+        height: 100vw;
+        min-width: unset;
+    }
     #subs{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(5,1fr);
+        width:100%;
+    }
+
+
+}
+@media screen and (min-width: 501px) and (max-width: 900px) {
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+    header{
+        justify-content: left;
+    }
+    body{
+        width: 100vw;
+    }
+    #navigation{
+        height:fit-content;
+        font-size: 0.50em;
+        margin-left: -3%;
+        text-align: center;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #starting11{
+        outline: red 0px solid;
+        width: 100%;
+        height: 100vw;
+        min-width: unset;
+    }
+    #subs{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        width:100%;
+    }
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1000px) {
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #subs{
+        grid-template-columns:repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1001px)and (max-width: 1350px) {
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #subs{
+        grid-template-columns:repeat(2,1fr);
+    }
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #subs{
+        grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media screen and (min-width: 2001px){
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #subs{
+        grid-template-columns: repeat(5,1fr);
     }
   }
