@@ -1,4 +1,6 @@
 class PlayerCard{
+
+    
     constructor(id){
         this.id = id;
         this.elem = document.getElementById(this.id);

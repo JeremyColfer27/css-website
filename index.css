@@ -5,10 +5,24 @@
 }
 
 body{
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
     background-color: rgba(226, 224, 224, 0.555);
+}
+
+#virus1{
+    width:100%;
+    display: none;
+}
+
+#virus1 img{
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 80%;
+    z-index: 3;
 }
 
 header{
