@@ -23,13 +23,14 @@ header{
     z-index: 3;
 
     box-shadow: 0px 3px 5px 2px rgb(175, 175, 175);
-    background-color: rgba(180, 213, 255, 0.199);
+    background-color: rgba(241, 54, 54, 0.856);
     font-family: 'Source Code Pro', monospace;
     text-align: center;
 
+
 }
 header a{
-    font-weight: 700;
+    font-weight: 600;
     height: 100%;
     border:0px black dotted;
     font-size: 1.1em;
@@ -67,7 +68,7 @@ header a:hover{
     outline:0px solid red;
 
 
-    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
+    filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 }
 #navigation{
     /*justify-self: right;*/
@@ -98,236 +99,79 @@ header a:hover{
 }
 
 
+/*------------------------MAIN-----------------------------*/
 
 
 main{
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-}
-main div{
-    outline: rgb(255, 255, 255) 0px dotted;
+    grid-template-columns:  4fr 1fr;
+    margin-bottom: 120px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/*--------------------------------LEFT ADVERT------------------------------*/
-#left-advert{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-right:10px;
-    padding: 0;
-    width:100%;
-    height:fit-content;
-    z-index: 1;
-    border-right:0px rgba(216, 92, 92, 0.514) solid;
-}
-#left-advert img{
+main img{
+    display: block;
+    width:96%;
+    margin:auto;
 
+    
+}
+
+#main-centre{
+    padding: 0 0;
+    background-color: white;
+}
+
+#club-news-heading{
+    
     width: 100%;
-}
-#left-advert p{
-    width: 90%;
-}
-/*------------Middle--------------------------------------*/
-#pan-container{
-    width: 100%;
-    padding-top: 1px;
-}
-#pan-container img{
-    padding:0;
-    margin: 0;
-    width:100%;
-}
-#articles-container{
-    width:100%;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: fit-content;
-}
-.article{
-    outline: 0px black solid;
-    background-color: rgba(128, 128, 128, 0.103);
-    width:95%;
-    padding:10px 0;
+    text-align: center;
     margin-bottom: 10px;
-    font-family:monospace;
-    font-size:0.75em;
-    text-align: center;
-}
-
-.article h1{
-    padding-top: 4px;
-    font-weight: lighter;
-}
-
-
-
-
-.article img{
-    width: calc(90% - 14px);
-    display: block;
-    margin: auto;
-    max-height:fit-content
-}
-
-#article-ad1{
-    display: none;
-    border-top: 1px black solid;
-    border-bottom: 1px black solid;
-}
-
-/* -------------------------------MATCH CARDS---------------------------- */
-#pan-container{
-    padding-top: 1px;
-}
-#pan-container img{
-    width:100%;
-    display: block;
-}
-#recent-games{
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    flex-flow: reverse;
-    background-color: rgb(240, 238, 238);
-    outline: 0px cyan solid;
-}
-
-.match-card{
-    --scale-factor: 1;
-    font-family: 'Courier New', Courier, monospace;
-    width:300px;
-    height: 300px;
-    display:grid;
-    grid-template-rows: 1fr 5fr 1fr;
-
-
-    border-radius: 5%;
-    background-color:white;
-    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
-
-    text-align: center;
-    color:black;
-    transform: scale(0.8);
-}
-.match-card:hover{
-    animation-name: grow;
-    animation-duration: 0.3s;
-    animation-direction:normal;
-    animation-fill-mode: forwards;
-    z-index: 1;
-}
-.date{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-
-    background-color: rgb(187, 86, 39);
-    border-radius: 15px 15px 0 0;
-
-    box-shadow: 0px 0px 0px 0px rgba(151, 11, 11, 0.13);
-
-    font-weight: 550;
+    background-color: rgba(255, 164, 164, 0);
+    border-top:black 3px solid;
+    border-bottom:black 3px solid;
+    box-shadow: 0px 0px 6px 2px rgba(97, 96, 96, 0.452);
+    color: black;
+    font-family:monospace ;
     
 }
-.date .big-number{
+
+#articles-container{
     
-    font-size:1.5em;
-    padding:3%;
-}
-.competition-label{
-    margin:12px 0 2px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding:0 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
 }
 
-
-.inner{
-    width:100%;
+.article{
     display: flex;
     flex-direction: column;
-}
-.clubs-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-.clubs-container p{
-    font-weight: 600;
-    font-size: large;
-    border-top: 3px black solid;
-    border-bottom:3px black solid;
-}
-.clubs-container img{
-    height:110px;
-    width: 110px;
-    display: block;
-
-    padding: 2%;
-}
-#home-logo{
-    display: block;
-}
-#away-logo{
-    border-radius: 18%;
-}
-.clubs-container p{
-    margin:3px;
-}
-.description p{
-    padding:6px;
-}
-
-.description #description-location{
-    color:rgb(114, 114, 114);
-}
-.match-report-button{
-    width:100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-top: 0px grey dotted;
-}
-.match-report-link{
-    text-decoration: none;
-    color: inherit;
-
-}
-
-#date-2-games-ago, #date-1-games-ago{
-    background-color: rgb(42, 129, 42);
-}
-
-#date-next-game{
-    background-color: grey;
-}
-
-@keyframes grow {
-
-    from{
-        filter: drop-shadow(0 0 0px rgba(237, 250, 121, 0.705));
-
-    }
-    to{transform: scale(1.15);
-        filter: drop-shadow(0 0 6px rgba(237, 250, 121, 0.705));
-
-    }
+    justify-content:space-around;
+    margin-bottom: 1%;
+    padding-bottom: 1.5%;
     
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+    box-shadow: 0px 0px 6px 2px rgba(97, 96, 96, 0.452);
 }
-@media screen and (max-width:500px) {
-    #left-advert{
-        display: none;
-    }
+.article h2{
+    margin-top: 4px;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
 
-    header{
-        justify-content: left;
-    }
+
+#main-right{
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width:500px){
 
     #navigation{
         font-size: 0.42em;
@@ -336,54 +180,29 @@ main div{
         text-align: center;
     }
 
+    #navigation{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    h2{
+        font-size: medium;
+        font-weight: 500;
+    }
 
 
 
     main{
-        grid-template-columns:100%;
+        grid-template-columns: 1fr;
     }
 
     #articles-container{
         grid-template-columns: 1fr;
-        width: 100%;
-
     }
 
-    #article-ad1{
-        display: block;
-
-    }
-
-    #recent-games{
+    #main-left{
         display: none;
-        max-width:100%;
-        transform: scale(0.5);
-    }
-    .article{
-        width: 100%;
     }
 
-    @keyframes grow {
 
-        from{
-            filter: drop-shadow(0 0 0px rgba(237, 250, 121, 0.705));
-    
-        }
-        to{
-            transform: scale(1);
-            filter: drop-shadow(0 0 6px rgba(237, 250, 121, 0.705));
-    
-        }
-        
-    }
 
-    
-}
-@media screen and (max-width:900px) {
-
-    #navigation{
-        grid-template-columns: repeat(3,1fr);
-    }
-
-    
 }

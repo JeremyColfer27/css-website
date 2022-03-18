@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@200&display=swap');
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgba(226, 224, 224, 0.555);
+}
+
+header{
+
+    padding: 8px 0 2px 0px;
+    height:19vh;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    z-index: 3;
+
+    box-shadow: 0px 3px 5px 2px rgb(175, 175, 175);
+    background-color: rgba(180, 213, 255, 0.199);
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+
+}
+header a{
+    font-weight: 700;
+    height: 100%;
+    border:0px black dotted;
+    font-size: 1.1em;
+    color:rgb(0, 0, 0);
+    text-align: none;
+    text-decoration: none;
+}
+
+header a:hover{
+    color:rgb(197, 52, 52);
+}
+
+#badge{
+    max-height: 100%;
+    height: 100%;
+
+}
+
+#badge a{
+    background-color: rgb(88, 29, 29);
+    margin:0;
+    padding:0;
+    width: 100%;
+    outline: solid 0px rgb(60, 218, 94);
+    max-height:100%;
+}
+
+#badge a img{
+    margin: 0;
+    padding: 0;
+    height: 95%;
+    max-width: 100%;
+    display: block;
+
+    outline:0px solid red;
+
+
+    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
+}
+#navigation{
+    /*justify-self: right;*/
+    height:fit-content;
+    width: 100%;
+    font-size: 0.8em;
+    outline:purple 0px solid;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+#navigation a{
+    margin:1.8em 0px;
+    font-size: 1.3em;
+    outline: 0px grey dotted;
+    height:fit-content;
+
+}
+
+#title.hover{
+    cursor:crosshair;
+}
+
+
+.navbar{
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+main div{
+    outline: rgb(255, 255, 255) 0px dotted;
+}
+
+/*--------------------------------LEFT ADVERT------------------------------*/
+#left-advert{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right:10px;
+    padding: 0;
+    width:100%;
+    height:fit-content;
+    z-index: 1;
+    border-right:0px rgba(216, 92, 92, 0.514) solid;
+}
+#left-advert img{
+
+    width: 100%;
+}
+#left-advert p{
+    width: 90%;
+}
+/*------------Middle--------------------------------------*/
+#pan-container{
+    width: 100%;
+    padding-top: 1px;
+}
+#pan-container img{
+    padding:0;
+    margin: 0;
+    width:100%;
+}
+#articles-container{
+    width:100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+}
+.article{
+    outline: 0px black solid;
+    background-color: rgba(128, 128, 128, 0.103);
+    width:95%;
+    padding:10px 0;
+    margin-bottom: 10px;
+    font-family:monospace;
+    font-size:0.75em;
+    text-align: center;
+}
+
+.article h1{
+    padding-top: 4px;
+    font-weight: lighter;
+}
+
+
+
+
+.article img{
+    width: calc(90% - 14px);
+    display: block;
+    margin: auto;
+    max-height:fit-content
+}
+
+#article-ad1{
+    display: none;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+/* -------------------------------MATCH CARDS---------------------------- */
+#pan-container{
+    padding-top: 1px;
+}
+#pan-container img{
+    width:100%;
+    display: block;
+}
+#recent-games{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-flow: reverse;
+    background-color: rgb(240, 238, 238);
+    outline: 0px cyan solid;
+}
+
+.match-card{
+    --scale-factor: 1;
+    font-family: 'Courier New', Courier, monospace;
+    width:300px;
+    height: 300px;
+    display:grid;
+    grid-template-rows: 1fr 5fr 1fr;
+
+
+    border-radius: 5%;
+    background-color:white;
+    filter: drop-shadow(0 0 8px rgb(104, 99, 99));
+
+    text-align: center;
+    color:black;
+    transform: scale(0.8);
+}
+.match-card:hover{
+    animation-name: grow;
+    animation-duration: 0.3s;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+.date{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    background-color: rgb(187, 86, 39);
+    border-radius: 15px 15px 0 0;
+
+    box-shadow: 0px 0px 0px 0px rgba(151, 11, 11, 0.13);
+
+    font-weight: 550;
+    
+}
+.date .big-number{
+    
+    font-size:1.5em;
+    padding:3%;
+}
+.competition-label{
+    margin:12px 0 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inner{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.clubs-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.clubs-container p{
+    font-weight: 600;
+    font-size: large;
+    border-top: 3px black solid;
+    border-bottom:3px black solid;
+}
+.clubs-container img{
+    height:110px;
+    width: 110px;
+    display: block;
+
+    padding: 2%;
+}
+#home-logo{
+    display: block;
+}
+#away-logo{
+    border-radius: 18%;
+}
+.clubs-container p{
+    margin:3px;
+}
+.description p{
+    padding:6px;
+}
+
+.description #description-location{
+    color:rgb(114, 114, 114);
+}
+.match-report-button{
+    width:100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 0px grey dotted;
+}
+.match-report-link{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+#date-2-games-ago, #date-1-games-ago{
+    background-color: rgb(42, 129, 42);
+}
+
+#date-next-game{
+    background-color: grey;
+}
+
+@keyframes grow {
+
+    from{
+        filter: drop-shadow(0 0 0px rgba(237, 250, 121, 0.705));
+
+    }
+    to{transform: scale(1.15);
+        filter: drop-shadow(0 0 6px rgba(237, 250, 121, 0.705));
+
+    }
+    
+}
+@media screen and (max-width:500px) {
+    #left-advert{
+        display: none;
+    }
+
+    header{
+        justify-content: left;
+    }
+
+    #navigation{
+        font-size: 0.42em;
+        max-width: 65%;
+        margin-left: -3%;
+        text-align: center;
+    }
+
+
+
+
+    main{
+        grid-template-columns:100%;
+    }
+
+    #articles-container{
+        grid-template-columns: 1fr;
+        width: 100%;
+
+    }
+
+    #article-ad1{
+        display: block;
+
+    }
+
+    #recent-games{
+        display: none;
+        max-width:100%;
+        transform: scale(0.5);
+    }
+    .article{
+        width: 100%;
+    }
+
+    @keyframes grow {
+
+        from{
+            filter: drop-shadow(0 0 0px rgba(237, 250, 121, 0.705));
+    
+        }
+        to{
+            transform: scale(1);
+            filter: drop-shadow(0 0 6px rgba(237, 250, 121, 0.705));
+    
+        }
+        
+    }
+
+    
+}
+@media screen and (max-width:900px) {
+
+    #navigation{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    
+}
