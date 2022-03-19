@@ -109,6 +109,8 @@ header a:hover{
 
 
 main{
+    background-color: rgb(209, 228, 209);
+    height: 100%;
     width: 100%;
 }
 
