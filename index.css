@@ -218,7 +218,9 @@ main img{
     padding-left: 2%;
     padding-right: 2%;
 }
-
+.articlead{
+    display: none;
+}
 
 #main-right{
     display: none;
@@ -246,7 +248,9 @@ main img{
         font-weight: 500;
     }
 
-
+    margin-left{
+        display: none;
+    }
 
     main{
         grid-template-columns: 1fr;
@@ -254,6 +258,10 @@ main img{
 
     #articles-container{
         grid-template-columns: 1fr;
+    }
+
+    .articlead{
+        display: block;
     }
 
     #main-left{
