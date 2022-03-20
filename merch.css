@@ -6,7 +6,7 @@
 
 body{
     width:100vw;
-    height:120vh;
+    height:fit-content;
 }
 /*---------------------------Navbar-------------------------------------------------*/
 header{
@@ -183,25 +183,26 @@ main{
     width:80%;
 }
 .product-name{
-
-    font-size: 1.3em;
+    padding:5% 0 0 5%;
+    font-size: 1.2em;
 }
 .product-description{
+    color: rgb(0, 0, 0);
     position: absolute;
     visibility: hidden;
-
+    height: 100%;
     font-size: 1.5em;
-    width:80%;
+    width:95%;
     left:10%;
     margin:0;
     top:30%;
     text-align: center;
     margin-top:8px;
     font-family: monospace;
-
     z-index: 1;
 }
 .product-price{
+    padding-left: 5.7%;
     margin-top:0.2em;
 
     font-size:1.2em;
@@ -212,7 +213,10 @@ main{
     #products-container{
         grid-template-columns: 1fr;
     }
-    #product-description{font-size: 0.5em;}
+    .product-description{
+        font-size: 1.8em;
+        top:25%;
+    }
 
         
     header{
@@ -230,11 +234,13 @@ main{
 
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (min-width: 501px) and (max-width: 1000px) {
     #products-container{
         grid-template-columns: 1fr 1fr;
     }
-    #product-description{font-size: 0.8em;}    
+    .product-description{
+        top:30%;
+        font-size: 1.5em}    
 
     #navigation{
             grid-template-columns: repeat(3,1fr);

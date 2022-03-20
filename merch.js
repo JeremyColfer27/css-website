@@ -84,7 +84,7 @@ for (let i = 0; i<products.length; i++){
         buttons[j].addEventListener("mouseover", function(){
             console.log("hovered!!");
             currentDesc.style.visibility = "visible";
-            currentImage.style.opacity = "20%";
+            currentImage.style.opacity = "15%";
             currentImage.style.cursor = "pointer";
 
         })
