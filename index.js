@@ -24,6 +24,7 @@ let botLeftClose = document.getElementById("jason-virus-close-bot-left");
 
 topLeftClose.addEventListener("click", function()
 {
+    document.getElementById('jason-virus-audio').play();
     topLeftClose.style = "display:none;";
     topRightClose.style = "display:block;";
 }
@@ -32,6 +33,7 @@ topRightClose.addEventListener("click", function()
 
 
 {
+    document.getElementById('jason-virus-audio').play();
     topRightClose.style = "display:none;";
     botLeftClose.style = "display:block;";
 }
@@ -41,6 +43,7 @@ botLeftClose.addEventListener("click", function()
 
 
 {
+    document.getElementById('jason-virus-audio').play();
     botLeftClose.style = "display:none;";
     botRightClose.style = "display:block;";
 }
@@ -48,6 +51,7 @@ botLeftClose.addEventListener("click", function()
 
 botRightClose.addEventListener("click", function()
 {
+    document.getElementById('jason-virus-audio').play();
     jasonVirus.hide();
 }
 );
@@ -60,7 +64,7 @@ botRightClose.addEventListener("click", function()
 setTimeout(function(){
     jasonVirus.show();
 
-}, 1000);
+}, 10000);
 
 //showJasonVirus();
 
