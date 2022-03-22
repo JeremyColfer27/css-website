@@ -1,16 +1,11 @@
 *{
     padding:0;
-    margin: 0;
+    margin:0;
 }
-
 
 body{
-    background-color: blanchedalmond;
-    width: 100vw;
-    font-family: monospace;
+    background-color: rgba(243, 144, 213, 0.397);
 }
-
-
 header{
 
     padding: 8px 0 2px 0px;
@@ -29,6 +24,8 @@ header{
 
 
 }
+
+
 header a{
     font-weight: 600;
     height: 100%;
@@ -99,34 +96,6 @@ header a:hover{
 }
 
 
-main{
-    margin-top: 6%;
-}
-
-.video-container{
-    
-    margin: auto;
-    width:88%;
-    text-align: center;
-}
-
-.video-container .divider{
-    margin: 16% auto;
-    height: 2px;
-    width:30%;
-    background-color: rgba(0, 0, 0, 0.603);
-}
-
-.video-container p{
-    text-decoration: underline;
-    font-size: 1.8em;
-    margin-bottom:3% ;
-}
-.video-container video{
-    border: white 2px solid;
-    filter: drop-shadow(0 0 4px rgba(223, 75, 75, 0.705));
-}
-
 @media screen and (max-width:500px) {
     .video-container p{
         text-decoration: underline;
@@ -165,4 +134,3 @@ main{
         display: none;
     }
 }
-

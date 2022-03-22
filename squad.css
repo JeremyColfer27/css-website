@@ -101,7 +101,6 @@ main{
 }
 #starting111{
     width:100%;
-    padding-top: 100%;
     position: relative;
     background-color: rgba(27, 172, 46, 0.363);
 }
@@ -112,12 +111,22 @@ main{
     position: relative;
     background-color: rgba(27, 172, 46, 0.363);
 }
+#starting11 p{
+    font-family: monospace;
+    margin: auto;
+    font-size: 1.2em;
+    padding-top: 1%;
+    width:90%;
+    text-align: center;
+}
+
 .playercard{
     position: absolute;
     width:25%;
     height: 25%;
     padding:0;
     margin: 0;
+    transform: translateY(12%);
 
     outline:rgb(212, 162, 175) 0px dotted;
 }
@@ -127,7 +136,7 @@ main{
 #gk{
 
     left:37.5%;
-    bottom:0%;
+    bottom:3%;
 }
 
 #lb{
@@ -195,6 +204,11 @@ main{
     flex-direction: column;
     width:100%;
 }
+#subsection{
+    width: 100%;
+    background-color: blanchedalmond;
+    z-index: -1;
+}
 #subs{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -204,6 +218,12 @@ main{
     outline: red 0px solid;
 }
 
+#subsection h2{
+    font-size: 1.8em;
+    width: 90%;
+    text-align: center;
+    text-decoration: underline;
+}
 
 #subs .playercard{
     height: fit-content;
@@ -235,8 +255,21 @@ main{
     #starting11{
         outline: red 0px solid;
         width: 100%;
-        height: 100vw;
+        height: 110vw;
         min-width: unset;
+    }
+
+    #starting11 .playercard{
+
+        transform: translateY(37%);
+    }
+    #subsection h2{
+        margin-top: 1%;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    #starting11 p{
+        font-size: 1em;
     }
     #subs{
         display: grid;
@@ -248,7 +281,7 @@ main{
 }
 @media screen and (min-width: 501px) and (max-width: 900px) {
     #navigation{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(6,1fr);
     }
     header{
         justify-content: left;
@@ -258,9 +291,12 @@ main{
     }
     #navigation{
         height:fit-content;
-        font-size: 0.50em;
+        font-size: 0.72em;
         margin-left: -3%;
         text-align: center;
+    }
+    #navigation a{
+        
     }
     main{
         width: 100%;
@@ -282,7 +318,7 @@ main{
 
   @media screen and (min-width: 901px) and (max-width: 1000px) {
     #navigation{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(6,1fr);
     }
     #subs{
         grid-template-columns:repeat(1, 1fr);
@@ -291,7 +327,7 @@ main{
 
   @media screen and (min-width: 1001px)and (max-width: 1350px) {
     #navigation{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(6,1fr);
     }
     #subs{
         grid-template-columns:repeat(2,1fr);
@@ -299,7 +335,7 @@ main{
   }
   @media screen and (min-width: 1351px) and (max-width: 2000px) {
     #navigation{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(6,1fr);
     }
     #subs{
         grid-template-columns: repeat(3,1fr);
@@ -307,7 +343,7 @@ main{
   }
   @media screen and (min-width: 2001px){
     #navigation{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(6,1fr);
     }
     #subs{
         grid-template-columns: repeat(5,1fr);
