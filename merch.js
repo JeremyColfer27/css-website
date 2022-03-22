@@ -33,7 +33,7 @@ class SoilProduct extends Product{
 
 
 let conversionRates = [1,0.08,376453357];
-let currencySymbols = ["GBP", "Sheep", "Lira"];
+let currencySymbols = ["GBP", "Sheeps", "Lira"];
 
 let shirt = new Product("Pulling Tonight Unisexdsfdsf Tee", 85, "t-shirt");
 let pasta = new Product("James' Pasta (E-book)", 24, "pasta");
