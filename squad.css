@@ -134,7 +134,7 @@ main{
     cursor: pointer;
 }
 #gk{
-
+    z-index: 2;
     left:37.5%;
     bottom:3%;
 }
@@ -207,7 +207,7 @@ main{
 #subsection{
     width: 100%;
     background-color: blanchedalmond;
-    z-index: -1;
+    z-index: 1;
 }
 #subs{
     display: grid;
@@ -295,9 +295,7 @@ main{
         margin-left: -3%;
         text-align: center;
     }
-    #navigation a{
-        
-    }
+
     main{
         width: 100%;
         display: flex;
