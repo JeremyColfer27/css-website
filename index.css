@@ -175,6 +175,13 @@ main img{
     
 }
 
+#statement{
+    font-size: 1.1em;
+    padding-top: 3%;
+    font-family: monospace;
+    width: 88%;
+    margin: auto;
+}
 #main-centre{
     padding: 0 0;
     background-color: white;
